@@ -1177,6 +1177,12 @@
   "selectImportFile": {
     "message": "Valitse tuotava tiedosto"
   },
+  "chooseFile": {
+    "message": "Valitse tiedosto"
+  },
+  "noFileChosen": {
+    "message": "Ei tiedostoa valittuna"
+  },
   "orCopyPasteFileContents": {
     "message": "tai kopioi ja liitä tuotavan tiedoston sisältö"
   },
