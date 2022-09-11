@@ -4063,6 +4063,12 @@
   "permissions": {
     "message": "Käyttöoikeudet"
   },
+  "managerPermissions": {
+    "message": "Esimiehen käyttöoikeudet"
+  },
+  "adminPermissions": {
+    "message": "Järjestelmänvalvojan käyttöoikeudet"
+  },
   "accessEventLogs": {
     "message": "Tapahtumalokien käyttö"
   },
