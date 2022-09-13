@@ -130,10 +130,10 @@ export class AddEditComponent implements OnInit {
     ];
     this.identityTitleOptions = [
       { name: "-- " + i18nService.t("select") + " --", value: null },
-      { name: i18nService.t("mr"), value: i18nService.t("mr") },
-      { name: i18nService.t("mrs"), value: i18nService.t("mrs") },
-      { name: i18nService.t("ms"), value: i18nService.t("ms") },
-      { name: i18nService.t("dr"), value: i18nService.t("dr") },
+      { name: i18nService.t("mr"), value: "mr" },
+      { name: i18nService.t("mrs"), value: "mrs" },
+      { name: i18nService.t("ms"), value: "ms" },
+      { name: i18nService.t("dr"), value: "dr" },
     ];
     this.uriMatchOptions = [
       { name: i18nService.t("defaultMatchDetection"), value: null },
