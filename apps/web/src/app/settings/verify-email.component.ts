@@ -13,7 +13,7 @@ import { TokenService } from "@bitwarden/common/abstractions/token.service";
 export class VerifyEmailComponent {
   actionPromise: Promise<unknown>;
 
-  @Output() verifiedEmitter = new EventEmitter<boolean>();
+  @Output() onVerified = new EventEmitter<boolean>();
 
   constructor(
     private apiService: ApiService,
@@ -29,7 +29,7 @@ export class VerifyEmailComponent {
     }
     await this.apiService.refreshIdentityToken();
     if (await this.tokenService.getEmailVerified()) {
-      this.verifiedEmitter.emit(true);
+      this.onVerified.emit(true);
       this.platformUtilsService.showToast("success", null, this.i18nService.t("emailVerified"));
       return;
     }
