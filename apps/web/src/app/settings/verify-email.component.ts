@@ -40,7 +40,9 @@ export class VerifyEmailComponent {
 
     try {
       this.actionPromise = this.getIsVerified();
-      if ((await this.actionPromise) as Promise<boolean>) {return;}
+      if (await (this.actionPromise as Promise<boolean>)) {
+        return;
+      }
 
       this.actionPromise = this.apiService.postAccountVerifyEmail();
       await this.actionPromise;
