@@ -23,18 +23,25 @@ export class VerifyEmailComponent {
     private tokenService: TokenService
   ) {}
 
-  async send() {
-    if (this.actionPromise != null) {
-      return;
-    }
+  async getIsVerified(): Promise<boolean> {
     await this.apiService.refreshIdentityToken();
     if (await this.tokenService.getEmailVerified()) {
       this.onVerified.emit(true);
       this.platformUtilsService.showToast("success", null, this.i18nService.t("emailVerified"));
+      return true;
+    }
+    return false;
+  }
+
+  async send() {
+    if (this.actionPromise != null) {
       return;
     }
 
     try {
+      this.actionPromise = this.getIsVerified();
+      if ((await this.actionPromise) as Promise<boolean>) {return;}
+
       this.actionPromise = this.apiService.postAccountVerifyEmail();
       await this.actionPromise;
       this.platformUtilsService.showToast(
