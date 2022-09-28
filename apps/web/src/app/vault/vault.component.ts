@@ -169,8 +169,8 @@ export class VaultComponent implements OnInit, OnDestroy {
     );
   }
 
-  updateVerifyEmail(bool: boolean) {
-    this.showVerifyEmail = !bool;
+  emailVerified(verified: boolean) {
+    this.showVerifyEmail = !verified;
   }
 
   ngOnDestroy() {
