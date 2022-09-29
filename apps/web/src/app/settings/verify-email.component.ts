@@ -28,14 +28,15 @@ export class VerifyEmailComponent {
     if (await this.tokenService.getEmailVerified()) {
       this.onVerified.emit(true);
       this.platformUtilsService.showToast("success", null, this.i18nService.t("emailVerified"));
-    } else {
-      await this.apiService.postAccountVerifyEmail();
-      this.platformUtilsService.showToast(
-        "success",
-        null,
-        this.i18nService.t("checkInboxForVerification")
-      );
+      return;
     }
+
+    await this.apiService.postAccountVerifyEmail();
+    this.platformUtilsService.showToast(
+      "success",
+      null,
+      this.i18nService.t("checkInboxForVerification")
+    );
   }
 
   async send() {
