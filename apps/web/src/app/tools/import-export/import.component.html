@@ -293,7 +293,11 @@
         <label for="file">2. {{ "selectImportFile" | i18n }}</label>
         <br />
         <div class="file-selector">
-          <button class="btn btn-outline-primary" onclick="document.getElementById('file').click()">
+          <button
+            type="button"
+            class="btn btn-outline-primary"
+            onclick="document.getElementById('file').click()"
+          >
             {{ "chooseFile" | i18n }}
           </button>
           {{ this.fileSelected ? this.fileSelected.name : ("noFileChosen" | i18n) }}
