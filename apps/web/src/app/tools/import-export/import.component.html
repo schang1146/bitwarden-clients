@@ -296,20 +296,22 @@
           <button
             type="button"
             class="btn btn-outline-primary"
-            onclick="document.getElementById('file').click()"
+            (click)="fileSelector.click()"
+            [disabled]="importBlockedByPolicy$ | async"
           >
             {{ "chooseFile" | i18n }}
           </button>
           {{ this.fileSelected ? this.fileSelected.name : ("noFileChosen" | i18n) }}
         </div>
         <input
+          #fileSelector
           type="file"
           id="file"
           class="form-control-file"
           name="file"
-          style="display: none"
           [disabled]="importBlockedByPolicy$ | async"
           (change)="setSelectedFile($event)"
+          hidden
         />
       </div>
     </div>
