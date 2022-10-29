@@ -569,11 +569,14 @@
   "loginOrCreateNewAccount": {
     "message": "Log in or create a new account to access your secure vault."
   },
-  "loginWithDevice" : {
+  "loginWithDevice": {
     "message": "Log in with device"
   },
   "loginWithDeviceEnabledInfo": {
     "message": "Log in with device must be set up in the settings of the Bitwarden mobile app. Need another option?"
+  },
+  "loginWithMasterPassword": {
+    "message": "Log in with master password"
   },
   "createAccount": {
     "message": "Create account"
@@ -717,7 +720,7 @@
   "noOrganizationsList": {
     "message": "You do not belong to any organizations. Organizations allow you to securely share items with other users."
   },
-  "notificationSentDevice":{
+  "notificationSentDevice": {
     "message": "A notification has been sent to your device."
   },
   "versionNumber": {
@@ -1234,13 +1237,6 @@
   },
   "faviconDesc": {
     "message": "Show a recognizable image next to each login."
-  },
-  "enableGravatars": {
-    "message": "Show Gravatars",
-    "description": "Use avatar images loaded from gravatar.com."
-  },
-  "enableGravatarsDesc": {
-    "message": "Use avatar images loaded from gravatar.com."
   },
   "enableFullWidth": {
     "message": "Display full width layout",
@@ -5400,6 +5396,12 @@
   },
   "numberOfUsers": {
     "message": "Number of users"
+  },
+  "loggingInAs": {
+    "message": "Logging in as"
+  },
+  "notYou": {
+    "message": "Not you?"
   },
   "multiSelectPlaceholder": {
     "message": "-- Type to Filter --"
