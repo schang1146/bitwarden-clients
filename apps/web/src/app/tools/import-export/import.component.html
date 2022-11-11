@@ -297,7 +297,7 @@
             type="button"
             class="btn btn-outline-primary"
             (click)="fileSelector.click()"
-            [disabled]="importBlockedByPolicy$ | async"
+            [disabled]="importBlockedByPolicy"
           >
             {{ "chooseFile" | i18n }}
           </button>
