@@ -1,6 +1,6 @@
 import { DialogConfig, DialogRef, DIALOG_DATA } from "@angular/cdk/dialog";
 import { Component, Inject, OnInit } from "@angular/core";
-import { FormBuilder, Validators } from "@angular/forms";
+import { FormBuilder } from "@angular/forms";
 import { firstValueFrom, Observable } from "rxjs";
 
 import { DialogServiceAbstraction } from "@bitwarden/angular/services/dialog";
@@ -41,7 +41,7 @@ export class BulkMoveDialogComponent implements OnInit {
   cipherIds: string[] = [];
 
   formGroup = this.formBuilder.group({
-    folderId: ["", [Validators.required]],
+    folderId: [""],
   });
   folders$: Observable<FolderView[]>;
 
